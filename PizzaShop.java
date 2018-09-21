@@ -1,12 +1,12 @@
-package exercise;
-
-import exercise.factory.MargheritaPizzaFactory;
-import exercise.factory.OnionAndTunaPizzaFactory;
-import exercise.factory.PizzaFactory;
-import exercise.strategy.PizzaMaker;
-import exercise.strategy.Valentino;
-import exercise.director.Director;
-import exercise.pizza.*;
+import director.Director;
+import factory.MargheritaPizzaFactory;
+import factory.OnionAndTunaPizzaFactory;
+import factory.PizzaFactory;
+import pizza.Margherita;
+import pizza.OnionAndTuna;
+import pizza.Pizza;
+import strategy.PizzaMaker;
+import strategy.Valentino;
 
 import java.util.Arrays;
 import java.util.List;

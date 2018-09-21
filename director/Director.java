@@ -1,9 +1,12 @@
-package exercise.director;
+package director;
 
-import exercise.builder.*;
-import exercise.strategy.PizzaMaker;
-import exercise.strategy.Valentino;
-import exercise.pizza.*;
+import builder.PizzaBuilder;
+import pizza.Margherita;
+import pizza.MyOwnPizza;
+import pizza.OnionAndTuna;
+import pizza.Pizza;
+import strategy.PizzaMaker;
+import strategy.Valentino;
 
 import java.util.Arrays;
 import java.util.HashSet;

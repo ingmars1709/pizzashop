@@ -1,7 +1,7 @@
-package exercise.factory;
+package factory;
 
-import exercise.pizza.ManufacturedOnionAndTunaPizza;
-import exercise.pizza.Pizza;
+import pizza.ManufacturedOnionAndTunaPizza;
+import pizza.Pizza;
 
 public final class OnionAndTunaPizzaFactory implements PizzaFactory {
 

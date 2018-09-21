@@ -1,13 +1,12 @@
-package exercise.pizza;
+package pizza;
 
-import exercise.builder.PizzaBuilder;
-import exercise.builder.PizzaOrderBuilder;
-import exercise.order.PizzaOrder;
+import builder.PizzaBuilder;
+import builder.PizzaOrderBuilder;
+import order.PizzaOrder;
 
 public class OnionAndTuna extends Pizza {
 
     private OnionAndTuna() {
-
     }
 
     public static class Order implements PizzaOrderBuilder<OnionAndTuna> {

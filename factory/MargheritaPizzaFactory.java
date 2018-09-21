@@ -1,8 +1,7 @@
-package exercise.factory;
+package factory;
 
-import exercise.pizza.ManufacturedMargheritaPizza;
-import exercise.pizza.Margherita;
-import exercise.pizza.Pizza;
+import pizza.ManufacturedMargheritaPizza;
+import pizza.Pizza;
 
 public final class MargheritaPizzaFactory implements PizzaFactory {
 

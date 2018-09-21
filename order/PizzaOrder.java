@@ -1,6 +1,6 @@
-package exercise.order;
+package order;
 
-import exercise.pizza.Pizza;
+import pizza.Pizza;
 
 import java.util.HashSet;
 import java.util.Set;

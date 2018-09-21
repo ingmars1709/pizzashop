@@ -1,4 +1,4 @@
-package exercise.pizza;
+package pizza;
 
 import java.util.HashSet;
 import java.util.Set;

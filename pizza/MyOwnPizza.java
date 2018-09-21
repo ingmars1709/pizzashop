@@ -1,7 +1,7 @@
-package exercise.pizza;
+package pizza;
 
-import exercise.builder.PizzaOrderBuilder;
-import exercise.order.PizzaOrder;
+import builder.PizzaOrderBuilder;
+import order.PizzaOrder;
 
 public class MyOwnPizza extends Pizza {
 

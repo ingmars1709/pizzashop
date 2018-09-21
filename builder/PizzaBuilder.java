@@ -1,6 +1,6 @@
-package exercise.builder;
+package builder;
 
-import exercise.pizza.Pizza;
+import pizza.Pizza;
 
 public interface PizzaBuilder<T extends Pizza> {
 

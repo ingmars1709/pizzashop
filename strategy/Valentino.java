@@ -1,7 +1,7 @@
-package exercise.strategy;
+package strategy;
 
-import exercise.pizza.Pizza;
-import exercise.order.PizzaOrder;
+import pizza.Pizza;
+import order.PizzaOrder;
 
 public class Valentino implements PizzaMaker {
 

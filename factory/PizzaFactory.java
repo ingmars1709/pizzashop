@@ -1,6 +1,6 @@
-package exercise.factory;
+package factory;
 
-import exercise.pizza.Pizza;
+import pizza.Pizza;
 
 public interface PizzaFactory {
 

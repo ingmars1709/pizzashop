@@ -1,4 +1,4 @@
-package exercise.pizza;
+package pizza;
 
 public final class ManufacturedOnionAndTunaPizza extends Pizza {
 

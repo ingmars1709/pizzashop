@@ -1,8 +1,8 @@
-package exercise.pizza;
+package pizza;
 
-import exercise.builder.PizzaBuilder;
-import exercise.builder.PizzaOrderBuilder;
-import exercise.order.PizzaOrder;
+import builder.PizzaBuilder;
+import builder.PizzaOrderBuilder;
+import order.PizzaOrder;
 
 public class Margherita extends Pizza {
 

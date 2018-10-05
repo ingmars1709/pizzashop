@@ -16,11 +16,6 @@ public class WithTuna extends PizzaDecorator {
     }
 
     @Override
-    public Set<pizza.Pizza.Sauce> getSauces() {
-        return super.getSauces();
-    }
-
-    @Override
     public Integer getCost() {
         return super.getCost() + 2;
     }

@@ -14,7 +14,7 @@ public class MyOwnPizza extends Pizza {
         private PizzaOrder<MyOwnPizza> order;
 
         public Order() {
-            order = new PizzaOrder(MyOwnPizza::new);
+            order = new PizzaOrder<>(MyOwnPizza::new);
         }
 
         @Override
@@ -22,11 +22,13 @@ public class MyOwnPizza extends Pizza {
             return order;
         }
 
+        @Override
         public PizzaOrderBuilder<MyOwnPizza> addSauce(Pizza.Sauce sauce) {
             order.addSauce(sauce);
             return this;
         }
 
+        @Override
         public PizzaOrderBuilder<MyOwnPizza> addTopping(Pizza.Topping topping) {
             order.addTopping(topping);
             return this;

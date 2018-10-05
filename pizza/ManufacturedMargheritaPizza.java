@@ -7,10 +7,13 @@ public final class ManufacturedMargheritaPizza extends Pizza {
         this.addTopping(Topping.MOZZARELLA);
     }
 
+    @Override
     public void prepareDough() { }
 
+    @Override
     public void halfBake() { }
 
+    @Override
     public void finishBaking() { }
 
     @Override

@@ -9,10 +9,13 @@ public final class ManufacturedOnionAndTunaPizza extends Pizza {
         this.addTopping(Topping.ONION);
     }
 
+    @Override
     public void prepareDough() { }
 
+    @Override
     public void halfBake() { }
 
+    @Override
     public void finishBaking() { }
 
     @Override

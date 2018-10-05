@@ -9,11 +9,6 @@ public class WithTomatoSauce extends PizzaDecorator {
     }
 
     @Override
-    public Set<pizza.Pizza.Topping> getToppings() {
-        return super.getToppings();
-    }
-
-    @Override
     public Set<pizza.Pizza.Sauce> getSauces() {
         Set<pizza.Pizza.Sauce> sauces = super.getSauces();
         sauces.add(pizza.Pizza.Sauce.TOMATO);

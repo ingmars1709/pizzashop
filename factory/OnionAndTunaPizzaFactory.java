@@ -3,18 +3,18 @@ package factory;
 import pizza.ManufacturedOnionAndTunaPizza;
 import pizza.Pizza;
 
-public final class OnionAndTunaPizzaFactory implements PizzaFactory {
+public final class OnionAndTunaPizzaFactory implements PizzaFactory<ManufacturedOnionAndTunaPizza> {
 
     private OnionAndTunaPizzaFactory() {}
 
-    public static OnionAndTunaPizzaFactory factory = new OnionAndTunaPizzaFactory();
+    private static OnionAndTunaPizzaFactory factory = new OnionAndTunaPizzaFactory();
 
     public static OnionAndTunaPizzaFactory getInstance() {
         return factory;
     }
 
     @Override
-    public Pizza manufacturePizza() {
+    public ManufacturedOnionAndTunaPizza manufacturePizza() {
         return new ManufacturedOnionAndTunaPizza();
     }
 }

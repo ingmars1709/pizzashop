@@ -3,7 +3,7 @@ package factory;
 import pizza.ManufacturedMargheritaPizza;
 import pizza.Pizza;
 
-public final class MargheritaPizzaFactory implements PizzaFactory {
+public final class MargheritaPizzaFactory implements PizzaFactory<ManufacturedMargheritaPizza> {
 
     private MargheritaPizzaFactory() {}
 
@@ -13,8 +13,7 @@ public final class MargheritaPizzaFactory implements PizzaFactory {
         return factory;
     }
 
-    @Override
-    public Pizza manufacturePizza() {
+    public ManufacturedMargheritaPizza manufacturePizza() {
         return new ManufacturedMargheritaPizza();
     }
 }

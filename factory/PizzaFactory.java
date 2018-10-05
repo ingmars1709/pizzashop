@@ -2,8 +2,8 @@ package factory;
 
 import pizza.Pizza;
 
-public interface PizzaFactory {
+public interface PizzaFactory<T extends Pizza> {
 
-    Pizza manufacturePizza();
+    T manufacturePizza();
 
 }

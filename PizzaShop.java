@@ -1,3 +1,7 @@
+import decorator.PlainPizza;
+import decorator.WithOnion;
+import decorator.WithTomatoSauce;
+import decorator.WithTuna;
 import director.Director;
 import factory.MargheritaPizzaFactory;
 import factory.OnionAndTunaPizzaFactory;
@@ -40,6 +44,18 @@ public class PizzaShop {
         System.out.println("######");
 
         manufacturePizzas();
+
+        System.out.println("######");
+
+        decoratePizzas();
+    }
+
+    private static void decoratePizzas() {
+        decorator.Pizza pizzaWithTomatoTunoOnion = new WithTuna(new WithOnion(new WithTuna(new WithTomatoSauce(new PlainPizza()))));
+
+        System.out.println("Toppings of decorated pizza: "+ pizzaWithTomatoTunoOnion.getToppings());
+        System.out.println("Sauces of decorated pizza: "+ pizzaWithTomatoTunoOnion.getSauces());
+        System.out.println("Cost of decorated pizza: "+ pizzaWithTomatoTunoOnion.getCost());
     }
 
     private static void manufacturePizzas() {

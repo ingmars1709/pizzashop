@@ -1,7 +1,6 @@
 package factory;
 
 import pizza.ManufacturedOnionAndTunaPizza;
-import pizza.Pizza;
 
 public final class OnionAndTunaPizzaFactory implements PizzaFactory<ManufacturedOnionAndTunaPizza> {
 

@@ -5,15 +5,13 @@ import decorator.WithTuna;
 import director.Director;
 import factory.MargheritaPizzaFactory;
 import factory.OnionAndTunaPizzaFactory;
-import factory.PizzaFactory;
 import pizza.Margherita;
 import pizza.OnionAndTuna;
 import pizza.Pizza;
 import strategy.PizzaMaker;
 import strategy.Valentino;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.Stream;
 
 public class PizzaShop {
 
@@ -21,33 +19,35 @@ public class PizzaShop {
 
         final Director director = new Director(new Margherita.Luigi(), new OnionAndTuna.Mario(), new Valentino());
 
-        for (Pizza pizza : director.getAllKindsOfPizzaByBuilding()) {
-            pizza.eat();
-        }
+        director.getAllKindsOfPizzaByBuilding().stream().forEach(Pizza::eat);
 
-        System.out.println("######");
+        printSeparator();
 
         director.getMargherita().eat();
         director.getOnionAndTuna().eat();
 
-        System.out.println("######");
+        printSeparator();
 
         director.getMargheritaFromOrder();
         director.getOnionAndTunaFromOrder();
         director.getMyOwnPizzaFromOrder();
 
-        System.out.println("######");
+        printSeparator();
 
         PizzaMaker pizzaMaker = director.getPhasedBakedPizzaMaker();
         pizzaMaker.forOrder(new Margherita.Order().order()).eat();
 
-        System.out.println("######");
+        printSeparator();
 
         manufacturePizzas();
 
-        System.out.println("######");
+        printSeparator();
 
         decoratePizzas();
+    }
+
+    private static void printSeparator() {
+        System.out.println("######");
     }
 
     private static void decoratePizzas() {
@@ -59,11 +59,6 @@ public class PizzaShop {
     }
 
     private static void manufacturePizzas() {
-
-        final List<PizzaFactory> factories = Arrays.asList(MargheritaPizzaFactory.getInstance(), OnionAndTunaPizzaFactory.getInstance());
-
-        for (PizzaFactory factory : factories) {
-            factory.manufacturePizza().eat();
-        }
+        Stream.of(MargheritaPizzaFactory.getInstance(), OnionAndTunaPizzaFactory.getInstance()).forEach(f -> f.manufacturePizza().eat());
     }
 }

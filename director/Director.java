@@ -8,9 +8,9 @@ import pizza.Pizza;
 import strategy.PizzaMaker;
 import strategy.Valentino;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Director {
 
@@ -25,13 +25,10 @@ public class Director {
     }
 
     public Set<Pizza> getAllKindsOfPizzaByBuilding() {
-        final HashSet<Pizza> result = new HashSet<>();
-
-        for (PizzaBuilder pizzaBuilder : Arrays.asList(luigi, mario)) {
-            result.add(pizzaBuilder.prepareDough().addSauce().addTopping().bake());
-        }
-
-        return result;
+        return Stream
+                .of(luigi,mario)
+                .map(b -> b.prepareDough().addSauce().addTopping().bake())
+                .collect(Collectors.toSet());
     }
 
     public Margherita getMargherita() {
@@ -42,12 +39,7 @@ public class Director {
         return mario.prepareDough().addSauce().addTopping().bake();
     }
 
-    public Pizza getMargheritaFromOrder() {
-        return valentino.forOrder(new Margherita.Order()
-                .addSauce(Pizza.Sauce.BECHEMEL)
-                .addTopping(Pizza.Topping.RUCOLA)
-                .order());
-    }
+    public Pizza getMargheritaFromOrder() { return valentino.forOrder(new Margherita.Order().addSauce(Pizza.Sauce.BECHEMEL).addTopping(Pizza.Topping.RUCOLA).order()); }
 
     public Pizza getOnionAndTunaFromOrder() {
         return valentino.forOrder(new OnionAndTuna.Order().order());

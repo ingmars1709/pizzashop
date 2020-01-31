@@ -10,6 +10,6 @@ public class Leaf<A> implements Tree<A>{
 
     @Override
     public <T> T accept(final Visitor<T,A> visitor) {
-        return visitor.visitUnit(value);
+        return visitor.visitLeaf(value);
     }
 }

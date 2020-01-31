@@ -12,6 +12,6 @@ public class Node<A> implements Tree<A> {
 
     @Override
     public <T> T accept(final Visitor<T,A> visitor) {
-        return visitor.visitProd(t1, t2);
+        return visitor.visitNode(t1, t2);
     }
 }
